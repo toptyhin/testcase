@@ -3,7 +3,7 @@
 ## Setup
 
 1. Склонировать репозитарий перейти в директорию проекта
-2. запустить docker compose up --detach
+2. запустить `docker compose up --detach`
 на входе имеем 
 апач на 80м порту который отдает магазин опенкарта
 
@@ -14,9 +14,9 @@
 ![Containers](img/containers.png)
 
 3. базовые настройки и пароли 
-                 cp config-dist.php config.php
+                 `cp config-dist.php config.php
                  cp admin/config-dist.php admin/config.php
-                 php /var/www/html/install/cli_install.php install --username admin --password admin --email email@example.com --http_server http://localhost/ --db_driver mysqli --db_hostname mysql --db_username root --db_password opencart --db_database opencart --db_port 3306 --db_prefix oc_;
+                 php /var/www/html/install/cli_install.php install --username admin --password admin --email email@example.com --http_server http://localhost/ --db_driver mysqli --db_hostname mysql --db_username root --db_password opencart --db_database opencart --db_port 3306 --db_prefix oc_;`
 4. Работа с кодом в дирректории upload
     она смонтирована как volume внутри контейнера /var/www/html
 
