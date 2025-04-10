@@ -11,7 +11,7 @@
 
 + memcached & redis & postgresql
 
-![Containers](“https://github.com/toptyhin/testcase/blob/main/img/containers.png?raw=true”)
+![Containers](“/img/containers.png”)
 
 3. базовые настройки и пароли 
                  cp config-dist.php config.php
