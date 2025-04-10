@@ -11,7 +11,7 @@
 
 + memcached & redis & postgresql
 
-![Containers](“/img/containers.png”)
+![Containers](img/containers.png)
 
 3. базовые настройки и пароли 
                  cp config-dist.php config.php
