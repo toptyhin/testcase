@@ -21,6 +21,8 @@
     она смонтирована как volume внутри контейнера /var/www/html
 
 
+![Главная страница](img/home.png)
+
 # OpenCart
 
 ## Overview
