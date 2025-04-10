@@ -39,6 +39,16 @@
               <li>{{ text_reward }} {{ reward }}</li>
             {% endif %}
             <li>{{ text_stock }} {{ stock }}</li>
+            {% if rus_reviews %}
+              <li>{{ reviews }} {{ rus_reviews }}</li>
+            {% endif %}
+            {% if fake_reviews %}
+              <ul class="list-unstyled">
+                {% for fake in fake_reviews %}
+                  <li>{{ fake }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
           </ul>
           {% if review_status %}
             <div class="rating">

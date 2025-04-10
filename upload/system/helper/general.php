@@ -139,3 +139,21 @@ if (!function_exists('str_contains')) {
 		return $find === '' || strpos($string, $find) !== false;
 	}
 }
+
+/*
+ * @param int $num
+ * @param string $variant1
+ * @param string $variant2
+ * @param string $variant3
+ * 
+ * @return string
+ */
+if (!function_exists('rus_ending')) {
+	function rus_ending($num, $variant1, $variant2, $variant3) {
+		if($num >= 11 and $num <= 19) return $variant3;
+		$n = $num % 10;
+		if($n == 1) return $variant1;
+		if($n >= 2 and $n <= 4) return $variant2;
+		return $variant3;
+	}
+}

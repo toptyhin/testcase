@@ -242,7 +242,21 @@ class Product extends \Opencart\System\Engine\Controller {
 
 			$data['text_minimum'] = sprintf($this->language->get('text_minimum'), $product_info['minimum']);
 			$data['text_login'] = sprintf($this->language->get('text_login'), $this->url->link('account/login', 'language=' . $this->config->get('config_language')), $this->url->link('account/register', 'language=' . $this->config->get('config_language')));
-			$data['text_reviews'] = sprintf($this->language->get('text_reviews'), (int)$product_info['reviews']);
+			
+			if ($this->config->get('config_language') == 'ru-ru') {
+				$data['text_reviews'] = $product_info['reviews'] .' ' . rus_ending((int)$product_info['reviews'], "отзыв", "отзыва", "отзывов");
+				$data['rus_reviews'] = $data['text_reviews'];
+				$data['fake_reviews'] = array(
+					'1 ' . rus_ending(1, "отзыв", "отзыва", "отзывов"),
+					'2 ' . rus_ending(2, "отзыв", "отзыва", "отзывов"),
+					'5 ' . rus_ending(5, "отзыв", "отзыва", "отзывов"),
+					'1293 ' . rus_ending(1293, "отзыв", "отзыва", "отзывов"),
+				);
+			} else {
+				$data['text_reviews'] = sprintf($this->language->get('text_reviews'), (int)$product_info['reviews']);
+			}
+			
+			
 
 			$data['tab_review'] = sprintf($this->language->get('tab_review'), $product_info['reviews']);
 
