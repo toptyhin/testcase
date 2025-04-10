@@ -62,5 +62,5 @@
 
 - добавлена общесистемная функция измнения окончания для русского языка
 - вывод фейковых количеств отзывов
-- код в ветке feature/add-review-info
+- код в ветке feature/add-review-info [commit](https://github.com/toptyhin/testcase/commit/796150c86dc0654b64f6e165be20a87ba1a127e2)
 
